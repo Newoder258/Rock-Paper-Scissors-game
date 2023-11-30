@@ -1,0 +1,63 @@
+<html>
+
+
+<body>
+
+
+  <button onclick="
+    gameMove();
+    Result();
+      ">
+    Rock
+  </button>
+
+
+
+  <button onclick="
+      gameMove();
+      Result();
+      ">
+    Paper
+  </button>
+
+
+
+  <button onclick="
+      gameMove();
+    Result();
+      ">
+    Scissor
+  </button>
+
+
+  <script>
+
+
+
+    let result = '';
+    let computerMove = '';
+    function gameMove() {
+      const randomNumber = Math.random();
+
+
+      if (randomNumber <= 1 / 3) {
+        computerMove = 'Rock';
+      }
+      else if (randomNumber <= 2 / 3) {
+        computerMove = 'Paper';
+      }
+      else if (randomNumber >= 2 / 3) {
+        computerMove = 'Scissor';
+      }
+    }
+
+    function Result() {
+      if (computerMove === 'Rock') {result = 'You Win';}
+      else if (computerMove === 'Scissor') {result = 'You Lose';}
+      else if (computerMove === 'Paper') {result = 'Tie';}
+      alert('computermove is ' + computerMove + ' so ' + result);
+    }
+  </script>
+</body>
+
+</html>
