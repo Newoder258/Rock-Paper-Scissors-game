@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 
@@ -6,7 +7,7 @@
 
   <button onclick="
     gameMove();
-    Result();
+    rockResult();
       ">
     Rock
   </button>
@@ -15,7 +16,7 @@
 
   <button onclick="
       gameMove();
-      Result();
+      paperResult();
       ">
     Paper
   </button>
@@ -24,7 +25,7 @@
 
   <button onclick="
       gameMove();
-    Result();
+    scissorResult();
       ">
     Scissor
   </button>
@@ -51,10 +52,22 @@
       }
     }
 
-    function Result() {
+    function paperResult() {
       if (computerMove === 'Rock') {result = 'You Win';}
       else if (computerMove === 'Scissor') {result = 'You Lose';}
       else if (computerMove === 'Paper') {result = 'Tie';}
+      alert('computermove is ' + computerMove + ' so ' + result);
+    }
+    function rockResult() {
+      if (computerMove === 'Rock') {result = 'Tie';}
+      else if (computerMove === 'Scissor') {result = 'You Win';}
+      else if (computerMove === 'Paper') {result = 'You Lose';}
+      alert('computermove is ' + computerMove + ' so ' + result);
+    }
+    function scissorResult() {
+      if (computerMove === 'Rock') {result = 'You Lose';}
+      else if (computerMove === 'Scissor') {result = 'Tie';}
+      else if (computerMove === 'Paper') {result = 'You Win';}
       alert('computermove is ' + computerMove + ' so ' + result);
     }
   </script>
