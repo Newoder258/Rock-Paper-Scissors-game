@@ -6,7 +6,7 @@
 
 
   <button onclick="
-    
+    gameMove();
     playGame('Rock');
       ">
     Rock
@@ -15,7 +15,7 @@
 
 
   <button onclick="
-     
+     gameMove();
     playGame('Paper');
       ">
     Paper
@@ -24,6 +24,7 @@
 
 
   <button onclick="
+    gameMove();
     playGame('Scissor');
       ">
     Scissor
@@ -37,9 +38,9 @@
     let result = '';
     let computerMove = '';
     
-    
+    function gameMove() {
       const randomNumber = Math.random();
-    {
+    
       if (randomNumber <= 1 / 3) {
         computerMove = 'Rock';
       }
